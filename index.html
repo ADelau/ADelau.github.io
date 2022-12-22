@@ -1,1 +1,287 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Neaty HTML Web Template</title>
+<!--
+Neaty HTML Template
+http://www.templatemo.com/tm-501-neaty
+-->
+    <!-- load stylesheets -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400">  <!-- Google web font "Open Sans" -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">                                      <!-- Bootstrap style -->
+    <link rel="stylesheet" href="css/magnific-popup.css">                                <!-- Magnific pop up style, http://dimsemenov.com/plugins/magnific-popup/ -->
+    <link rel="stylesheet" href="css/templatemo-style.css">                                   <!-- Templatemo style -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+          <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+          <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+          <![endif]-->
+</head>
+    <body>        
+        <div class="container">
+            <div class="row">
+                <div class="tm-left-right-container">
+                    <!-- Left column: logo and menu -->
+                    <div class="tm-blue-bg tm-left-column">                        
+                        <div class="tm-logo-div text-xs-center">
+                            <img src="img/arnaud.png" alt="Logo" width="200" height="200">
+                            <h1 class="tm-site-name">Arnaud Delaunoy</h1>
+                            <h2 class="tm-section-title">PhD student</h2>
+                              <a href="https://github.com/ADelau" class="fa fa-github fa-2x"></a>
+                              <a href="https://twitter.com/ArnaudDelaunoy" class="fa fa-twitter fa-2x"></a>
+                              <a href="https://www.linkedin.com/in/arnaud-delaunoy-a2439818a/" class="fa fa-linkedin fa-2x"></a>
+                              <a href="https://scholar.google.com/citations?user=f5bhfbEAAAAJ&hl=fr" class="fa fa-graduation-cap fa-2x"></a>
+                        </div>
+                        <nav class="tm-main-nav">
+                            <ul class="tm-main-nav-ul">
+                                <li class="tm-nav-item">
+                                    <a href="#about" class="tm-nav-item-link">About</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#publications" class="tm-nav-item-link">Publications</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#presentations" class="tm-nav-item-link">Presentations</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                    <a href="#teaching" class="tm-nav-item-link">Teaching</a>
+                                </li>
+                                <li class="tm-nav-item">
+                                  <a href="#contact" class="tm-nav-item-link">Contact</a>
+                              </li>
+                            </ul>
+                        </nav>                                         
+                    </div> <!-- Left column: logo and menu -->
+                    
+                    <!-- Right column: content -->
+                    <div class="tm-right-column">
+
+                        <div class="tm-content-div">
+                            <!-- About section -->
+                            <section id="about" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">About me</h2>
+                                </header>
+                                <p> I have a background in data science and engineering with a focus on machine learning and I am currently pursuing a PhD at the University of Liège under the supervision of Professor <a href="https://glouppe.github.io/"> Gilles Louppe </a>. 
+                                  My current research is about designing simulation-based inference algorithms that can be reliably used for scientific purposes. 
+                                  In particular, I aim to build inference algorithms that avoid producing overconfident predictions. 
+                                  Beyond that, I have interests in approximate Bayesian inference, uncertainty quantification in deep learning and machine learning in general.
+                                </p>
+                            </section>
+                            <!-- Publications section -->
+                            <section id="publications" class="tm-section">
+                                <script>
+                                function show_hide_element(element_id) {
+                                  var x = document.getElementById(element_id);
+                                  if (x.style.display === "none") {
+                                    x.style.display = "block";
+                                  } else {
+                                    x.style.display = "none";
+                                  }
+                                }
+                                </script>
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Publications</h2>
+                                </header>
+                                <p> 
+                                  <b> Towards Reliable Simulation-Based Inference with Balanced Neural Ratio Estimation </b> [<a href="https://arxiv.org/pdf/2208.13624.pdf" color="blue">PDF</a>]</br>
+                                  <span STYLE="font-size:90%"><u>Arnaud Delaunoy</u>*, Joeri Hermans*, François Rozet, Antoine Wehenkel, Gilles Louppe </span></br>
+                                  <span STYLE="font-size:90%"><i>Advances in Neural Information Processing Systems, 2022</i></span></br>
+                                  <button onclick="show_hide_element('bnre_abstract')" style="background-color:white;color:#5555FF; border:none;" color="blue">Abstract</button>
+
+                                  <div id="bnre_abstract" style="display:none;">
+                                    Modern approaches for simulation-based inference rely upon deep learning surrogates to enable approximate inference with computer simulators. In practice,
+                                    the estimated posteriors’ computational faithfulness is, however, rarely guaranteed.
+                                    For example, <a href="https://arxiv.org/pdf/2110.06581.pdf" color="blue"> Hermans et al. </a> show that current simulation-based inference algorithms can produce posteriors that are overconfident, hence risking false inferences.
+                                    In this work, we introduce Balanced Neural Ratio Estimation (BNRE), a variation of
+                                    the <a href="https://arxiv.org/pdf/1903.04057.pdf" color="blue"> NRE algorithm </a> designed to produce posterior approximations that tend to be
+                                    more conservative, hence improving their reliability, while sharing the same Bayes
+                                    optimal solution. We achieve this by enforcing a balancing condition that increases
+                                    the quantified uncertainty in small simulation budget regimes while still converging
+                                    to the exact posterior as the budget increases. We provide theoretical arguments
+                                    showing that BNRE tends to produce posterior surrogates that are more conservative
+                                    than NRE’s. We evaluate BNRE on a wide variety of tasks and show that it produces
+                                    conservative posterior surrogates on all tested benchmarks and simulation budgets.
+                                    Finally, we emphasize that BNRE is straightforward to implement over NRE and
+                                    does not introduce any computational overhead.
+                                  </div>
+                                  
+                                </p>
+                                <p> 
+                                  <b> A Trust Crisis In Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful </b> [<a href="https://arxiv.org/pdf/2110.06581.pdf" color="blue">PDF</a>]</br>
+                                  <span STYLE="font-size:90%">Joeri Hermans*, <u>Arnaud Delaunoy</u>*, François Rozet, Antoine Wehenkel, Volodimir Begy, Gilles Louppe </span></br>
+                                  <span STYLE="font-size:90%"><i>Transactions on Machine Learning Research, 2022</i></span></br>
+                                  <button onclick="show_hide_element('crisis_abstract')" style="background-color:white;color:#5555FF; border:none;" color="blue">Abstract</button>
+
+                                  <div id="crisis_abstract" style="display:none;">
+                                    We present extensive empirical evidence showing that current Bayesian simulation-based
+                                    inference algorithms can produce computationally unfaithful posterior approximations. Our
+                                    results show that all benchmarked algorithms – (Sequential) Neural Posterior Estimation,
+                                    (Sequential) Neural Ratio Estimation, Sequential Neural Likelihood and variants of Approximate Bayesian Computation – can yield overconfident posterior approximations, which makes
+                                    them unreliable for scientific use cases and falsificationist inquiry. Failing to address this issue
+                                    may reduce the range of applicability of simulation-based inference. For this reason, we argue
+                                    that research efforts should be made towards theoretical and methodological developments of
+                                    conservative approximate inference algorithms and present research directions towards this
+                                    objective. In this regard, we show empirical evidence that ensembling posterior surrogates
+                                    provides more reliable approximations and mitigates the issue.
+                                  </div>
+                                </p>
+                                <p> 
+                                  <b> SAE: Sequential Anchored Ensembles </b> [<a href="https://arxiv.org/pdf/2201.00649.pdf" color="blue">PDF</a>]</br>
+                                  <span STYLE="font-size:90%"><u>Arnaud Delaunoy</u>, Gilles Louppe </span></br>
+                                  <span STYLE="font-size:90%"><i>Bayesian deep learning workshop, NeurIPS 2021</i></span></br>
+                                  <button onclick="show_hide_element('sae_abstract')" style="background-color:white;color:#5555FF; border:none;" color="blue">Abstract</button>
+
+                                  <div id="sae_abstract" style="display:none;">
+                                    Computing the Bayesian posterior of a neural network is a challenging task due
+                                    to the high-dimensionality of the parameter space. Anchored ensembles approximate the posterior by training an ensemble of neural networks on anchored losses
+                                    designed for the optima to follow the Bayesian posterior. Training an ensemble,
+                                    however, becomes computationally expensive as its number of members grows
+                                    since the full training procedure is repeated for each member. In this note, we
+                                    present Sequential Anchored Ensembles (SAE), a lightweight alternative to anchored ensembles. Instead of training each member of the ensemble from scratch,
+                                    the members are trained sequentially on losses sampled with high auto-correlation,
+                                    hence enabling fast convergence of the neural networks and efficient approximation
+                                    of the Bayesian posterior. SAE outperform anchored ensembles, for a given computational budget, on some benchmarks while showing comparable performance
+                                    on the others and achieved 2nd and 3rd place in the light and extended tracks of the
+                                    NeurIPS 2021 Approximate Inference in Bayesian Deep Learning competition.
+                                  </div>
+                                </p>
+                                <p> 
+                                  <b> Lightning-Fast Gravitational Wave Parameter Inference through Neural Amortization </b> [<a href="https://arxiv.org/pdf/2010.12931.pdf" color="blue">PDF</a>]</br>
+                                  <span STYLE="font-size:90%"><u>Arnaud Delaunoy</u>, Antoine Wehenkel, Tanja Hinderer, Samaya Nissanke, Christoph Weniger, Andrew R Williamson, Gilles Louppe </span></br>
+                                  <span STYLE="font-size:90%"><i>Machine Learning and the Physical Sciences Workshop, NeurIPS2020</i></span></br>
+                                  <button onclick="show_hide_element('gw_abstract')" style="background-color:white;color:#5555FF; border:none;" color="blue">Abstract</button>
+
+                                  <div id="gw_abstract" style="display:none;">
+                                    Gravitational waves from compact binaries measured by the LIGO and Virgo detectors are routinely analyzed using Markov Chain Monte Carlo sampling algorithms.
+                                    Because the evaluation of the likelihood function requires evaluating millions of
+                                    waveform models that link between signal shapes and the source parameters, running Markov chains until convergence is typically expensive and requires days of
+                                    computation. In this extended abstract, we provide a proof of concept that demonstrates how the latest advances in neural simulation-based inference can speed
+                                    up the inference time by up to three orders of magnitude – from days to minutes
+                                    – without impairing the performance. Our approach is based on a convolutional
+                                    neural network modeling the likelihood-to-evidence ratio and entirely amortizes the
+                                    computation of the posterior. We find that our model correctly estimates credible
+                                    intervals for the parameters of simulated gravitational waves.
+                                  </div>
+                                </p>
+
+                            </section>
+                            <!-- Presentations section -->
+                            <section id="presentations" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Presentations</h2>
+                                </header>
+                                    <h3 class="tm-blue-text tm-section-title tm-margin-b-45">Orals</h3>
+                                    <p>
+                                    <b> Towards Reliable Simulation-Based Inference with Balanced Neural Ratio Estimation </b> [<a href="content/talk_bnre.pdf" color="blue">slides</a>]</br>
+                                      <span STYLE="font-size:90%"><i>University of California Irvine Physics Astro/Particle-ML seminar (November 2022)</i></span></br>
+                                    </p>
+                                    <p>
+                                    <b> SAE: Sequential Anchored Ensembles </b> [<a href="content/slides_BDL.pdf" color="blue">slides</a>]</br>
+                                      <span STYLE="font-size:90%"><i>Approximate Inference in Bayesian Deep Learning competition, NeurIPS 2021 (December 2021)</i></span></br>
+                                    </p>
+
+                                    <h3 class="tm-blue-text tm-section-title tm-margin-b-45">Posters</h3>
+                                    <p>
+                                    <b> Towards Reliable Simulation-Based Inference with Balanced Neural Ratio Estimation </b> [<a href="content/bnre_poster.pdf" color="blue">poster</a>]</br>
+                                      <span STYLE="font-size:90%"><i>Advances in Neural Information Processing Systems, 2022 (December 2022)</i></span></br>
+                                    </p>
+                                    <p>
+                                    <b> A Trust Crisis In Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful </b> [<a href="content/crisis_poster.pdf" color="blue">poster</a>]</br>
+                                      <span STYLE="font-size:90%"><i>Machine Learning and the Physical Sciences Workshop, NeurIPS2022 (December 2022)</i></span></br>
+                                    </p>
+                                    <p>
+                                    <b> Lightning-Fast Gravitational Wave Parameter Inference through Neural Amortization </b> [<a href="content/LFI_GW_poster.pdf" color="blue">poster</a>]</br>
+                                      <span STYLE="font-size:90%"><i>Machine Learning and the Physical Sciences Workshop, NeurIPS2020 (December 2020)</i></span></br>
+                                    </p>
+
+                                    <h3 class="tm-blue-text tm-section-title tm-margin-b-45">Videos</h3>
+                                    <p>
+                                    <b> A Trust Crisis In Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful </b> [<a href="https://www.youtube.com/watch?v=sLM0JBbSjLw&t=1s" color="blue">video</a>]</br>
+                                      <span STYLE="font-size:90%"><i>Transactions on Machine Learning Research, 2022</i></span></br>
+                                    </p>
+                            </section>
+                            <!-- Teaching section -->
+                            <section id="teaching" class="tm-section">
+                                <header>
+                                    <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Teaching</h2>
+                                </header>
+                                <ul>
+                                  <li>INFO8006: Introduction to artificial intelligence (2020 - present) [<a href="https://github.com/glouppe/info8006-introduction-to-ai" color="blue">link</a>]</li>
+                                  <li>INFO8010: Deep learning (2021 - present) [<a href="https://github.com/glouppe/info8010-deep-learning" color="blue">link</a>]</li>
+                                  <li>MATH0487-2: Elements of statistics (2020 - present) [<a href="https://people.montefiore.uliege.be/sacre/MATH0487/" color="blue">link</a>]</li>
+                                  <li>PROJ0016: Big data project (2020 - 2022) </li>
+                                </ul>
+                            </section>
+
+                            <!-- Contact section -->
+                            <section id="contact" class="tm-section">
+                              <header>
+                                  <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Contact</h2>
+                              </header>
+                              <div style="float:left; width:50%;"><p>Room R.103 </br>
+                                B28 Montefiore Institute</br>
+                                ULiège, 4000 Liège </p></div>
+                              <div style="float:left; width:50%;"><p>delaunoy.arnaud@gmail.com </br>
+                              +32 487 48 13 21 </p></div>
+                            </section>
+                            <div style="float: left; width:100%;">
+                            <footer>
+                                <p class="tm-copyright-p"> Designed by TemplateMo</p>
+                            </footer>
+                          </div>
+                        </div>  
+                        
+                    </div> <!-- Right column: content -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+                
+        <!-- load JS files -->
+        <script src="js/jquery-1.11.3.min.js"></script>             <!-- jQuery (https://jquery.com/download/) -->
+        <script src="js/jquery.magnific-popup.min.js"></script>     <!-- Magnific pop-up (http://dimsemenov.com/plugins/magnific-popup/) -->
+        <script src="js/jquery.singlePageNav.min.js"></script>      <!-- Single Page Nav (https://github.com/ChrisWojcik/single-page-nav) -->
+        <script>     
+       
+            $(document).ready(function(){
+
+                // Single page nav
+                $('.tm-main-nav').singlePageNav({
+                    'currentClass' : "active",
+                    offset : 20
+                });
+
+                // Magnific pop up
+                $('.tm-gallery-1').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-2').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-gallery-3').magnificPopup({
+                  delegate: 'a', // child items selector, by clicking on it popup will open
+                  type: 'image',
+                  gallery: {enabled:true}
+                  // other options
+                }); 
+
+                $('.tm-current-year').text(new Date().getFullYear());                
+            });
+        </script>             
+</body>
+</html>
