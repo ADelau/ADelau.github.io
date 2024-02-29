@@ -72,7 +72,7 @@ http://www.templatemo.com/tm-501-neaty
                                 <p> I have a background in data science and engineering with a focus on machine learning and I am currently pursuing a PhD at the University of Liège under the supervision of Professor <a href="https://glouppe.github.io/"> Gilles Louppe </a>. 
                                   My current research is about designing simulation-based inference algorithms that can be reliably used for scientific purposes. 
                                   In particular, I aim to build inference algorithms that avoid producing overconfident predictions. 
-                                  Beyond that, I have interests in approximate Bayesian inference, uncertainty quantification in deep learning and machine learning in general.
+                                  Beyond that, I have interests in approximate Bayesian inference, uncertainty quantification, deep learning and machine learning in general.
                                 </p>
                             </section>
                             <!-- Publications section -->
@@ -91,10 +91,34 @@ http://www.templatemo.com/tm-501-neaty
                                     <h2 class="tm-blue-text tm-welcome-title tm-margin-b-45">Publications</h2>
                                 </header>
                                 <p> 
+                                  <b> Calibrating Neural Simulation-Based Inference with Differentiable Coverage Probability </b> [<a href="https://arxiv.org/pdf/2310.13402.pdf" color="blue">PDF</a>]</br>
+                                  <span STYLE="font-size:90%">Maciej Falkiewicz, Naoya Takeishi, Imahn Shekhzadeh, Antoine Wehenkel, <u>Arnaud Delaunoy</u>, Gilles Louppe, Alexandros Kalousis
+                                  </span></br>
+                                  <span STYLE="font-size:90%"><i>Advances in Neural Information Processing Systems, 2023</i></span></br>
+                                  <button onclick="show_hide_element('balancing_abstract')" style="background-color:white;color:#5555FF; border:none;" color="blue">Abstract</button>
+
+                                  <div id="balancing_abstract" style="display:none;">
+                                    Bayesian inference allows expressing the uncertainty of posterior belief under a
+                                    probabilistic model given prior information and the likelihood of the evidence.
+                                    Predominantly, the likelihood function is only implicitly established by a simulator posing the need for simulation-based inference (SBI). However, the existing
+                                    algorithms can yield overconfident posteriors (Hermans et al., 2022) defeating the
+                                    whole purpose of credibility if the uncertainty quantification is inaccurate. We
+                                    propose to include a calibration term directly into the training objective of the
+                                    neural model in selected amortized SBI techniques. By introducing a relaxation of
+                                    the classical formulation of calibration error we enable end-to-end backpropagation.
+                                    The proposed method is not tied to any particular neural model and brings moderate computational overhead compared to the profits it introduces. It is directly
+                                    applicable to existing computational pipelines allowing reliable black-box posterior
+                                    inference. We empirically show on six benchmark problems that the proposed
+                                    method achieves competitive or better results in terms of coverage and expected
+                                    posterior density than the previously existing approaches.
+                                  </div>
+                                  
+                                </p>
+                                <p> 
                                   <b> Balancing Simulation-based Inference for Conservative Posteriors </b> [<a href="https://arxiv.org/pdf/2304.10978.pdf" color="blue">PDF</a>]</br>
                                   <span STYLE="font-size:90%"><u>Arnaud Delaunoy</u>*, Benjamin Kurt Miller*, Patrick Forré, Christoph Weniger, Gilles Louppe
                                   </span></br>
-                                  <span STYLE="font-size:90%"><i>Under review, 2023</i></span></br>
+                                  <span STYLE="font-size:90%"><i>5th Symposium on Advances in Approximate Bayesian Inference, 2023</i></span></br>
                                   <button onclick="show_hide_element('balancing_abstract')" style="background-color:white;color:#5555FF; border:none;" color="blue">Abstract</button>
 
                                   <div id="balancing_abstract" style="display:none;">
@@ -213,8 +237,12 @@ http://www.templatemo.com/tm-501-neaty
                                     
                                     <h3 class="tm-blue-text tm-section-title tm-margin-b-45">Posters</h3>
                                     <p>
+                                    <b> Balancing Simulation-based Inference for Conservative Posteriors </b> [<a href="content/balancing_sbi_poster.pdf" color="blue">poster</a>]</br>
+                                      <span STYLE="font-size:90%"><i>5th Symposium on Advances in Approximate Bayesian Inference (July 2023)</i></span></br>
+                                    </p>
+                                    <p>
                                     <b> Towards Reliable Simulation-Based Inference with Balanced Neural Ratio Estimation </b> [<a href="content/bnre_poster.pdf" color="blue">poster</a>]</br>
-                                      <span STYLE="font-size:90%"><i>Advances in Neural Information Processing Systems, 2022 (December 2022)</i></span></br>
+                                      <span STYLE="font-size:90%"><i>Advances in Neural Information Processing Systems (December 2022)</i></span></br>
                                     </p>
                                     <p>
                                     <b> A Trust Crisis In Simulation-Based Inference? Your Posterior Approximations Can Be Unfaithful </b> [<a href="content/crisis_poster.pdf" color="blue">poster</a>]</br>
